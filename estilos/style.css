@@ -107,8 +107,7 @@ img {
     padding: 0 1.5rem;
 }
 
-input::placeholder,
-textarea::placeholder {
+input::placeholder {
     color: var(--cor-texto-secundario);
     opacity: 1;
 }
@@ -337,7 +336,6 @@ header {
 /* CADASTRO */
 .campo input,
 .campo select,
-.campo textarea,
 .filtro-campo input,
 .filtro-campo select {
     width: 100%;
@@ -355,16 +353,10 @@ header {
 
 .campo input:focus,
 .campo select:focus,
-.campo textarea:focus,
 .filtro-campo input:focus,
 .filtro-campo select:focus {
     border-color: var(--cor-primaria);
     box-shadow: 0 0 0 3px rgba(43, 111, 230, 0.12);
-}
-
-.campo textarea {
-    min-height: 80px;
-    resize: none;
 }
 
 .campo,
@@ -414,10 +406,6 @@ header {
     background-color: white;
     border: 1px solid var(--cor-borda);
     border-radius: 12px;
-}
-
-.campo:has(#observacoes) {
-    grid-column: 1 / -1;
 }
 
 .btn-cadastro {
@@ -1127,7 +1115,6 @@ header {
 
     .campo input,
     .campo select,
-    .campo textarea,
     .filtro-campo input,
     .filtro-campo select {
         font-size: 16px;

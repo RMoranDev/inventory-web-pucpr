@@ -1,6 +1,6 @@
 let parametros = new URLSearchParams(window.location.search);
 
-const rotulos = ["Nome do produto", "Código SKU", "Categoria", "Quantidade", "Preço (R$)", "Data de entrada", "Observações"];
+const rotulos = ["Nome do produto", "Código SKU", "Categoria", "Quantidade", "Preço (R$)", "Data de entrada"];
 
 
 function pegar(nome) {
@@ -76,8 +76,8 @@ function dataHoje() {
     return ano + "-" + mes + "-" + dia;
 }
 
-function validar(nome, sku, categoria, quantidade, preco, data, obs) {
-    const valores = [nome, sku, categoria, quantidade, preco, data, obs];
+function validar(nome, sku, categoria, quantidade, preco, data) {
+    const valores = [nome, sku, categoria, quantidade, preco, data];
 
     for (let i = 0; i < valores.length; i++) {
         if (valores[i] === "") {
@@ -106,9 +106,6 @@ function validar(nome, sku, categoria, quantidade, preco, data, obs) {
     if (data > dataHoje()) {
         return "A data de entrada não pode ser futura.";
     }
-    if (obs.length > 255) {
-        return "As observações não podem exceder 255 caracteres.";
-    }
     return "";
 }
 
@@ -120,7 +117,7 @@ function lerLista(chave) {
     return JSON.parse(texto);
 }
 
-function salvarProduto(id, nome, sku, categoria, quantidade, preco, data, obs) {
+function salvarProduto(id, nome, sku, categoria, quantidade, preco, data) {
     const produtos = lerLista("produtos");
     const processados = lerLista("cadastrosProcessados");
 
@@ -151,7 +148,6 @@ function salvarProduto(id, nome, sku, categoria, quantidade, preco, data, obs) {
         existente.quantidade = Number(existente.quantidade) + Number(quantidade);
         existente.preco = preco;
         existente.data = data;
-        existente.observacoes = obs;
         mensagem = 'Estoque do produto "' + existente.nome + '" atualizado com sucesso. Quantidade total: ' + existente.quantidade + ".";
     } else {
         produtos.push({
@@ -160,8 +156,7 @@ function salvarProduto(id, nome, sku, categoria, quantidade, preco, data, obs) {
             categoria: categoria,
             quantidade: Number(quantidade),
             preco: preco,
-            data: data,
-            observacoes: obs
+            data: data
         });
     }
 
@@ -173,7 +168,7 @@ function salvarProduto(id, nome, sku, categoria, quantidade, preco, data, obs) {
     return true;
 }
 
-function exibirProduto(nome, sku, categoria, quantidade, preco, data, obs) {
+function exibirProduto(nome, sku, categoria, quantidade, preco, data) {
     const area = document.getElementById("dados-produto");
     area.innerHTML = "";
 
@@ -181,7 +176,7 @@ function exibirProduto(nome, sku, categoria, quantidade, preco, data, obs) {
     const p = data.split("-");
     const dataBr = p[2] + "/" + p[1] + "/" + p[0];
 
-    const valores = [nome, sku, nomeCategoria(categoria), quantidade, "R$ " + Number(preco).toFixed(2).replace(".", ","), dataBr, obs];
+    const valores = [nome, sku, nomeCategoria(categoria), quantidade, "R$ " + Number(preco).toFixed(2).replace(".", ","), dataBr];
 
     for (let i = 0; i < valores.length; i++) {
         const linha = document.createElement("div");
@@ -218,17 +213,16 @@ function processarCadastro() {
     const quantidade = pegar("quantidade");
     const preco = pegar("preco");
     const data = pegar("data");
-    const obs = pegar("observacoes");
 
-    const erro = validar(nome, sku, categoria, quantidade, preco, data, obs);
+    const erro = validar(nome, sku, categoria, quantidade, preco, data);
     if (erro !== "") {
         exibirResultado("erro", "Dados inválidos", erro);
         limparDados();
         return;
     }
 
-    salvarProduto(id, nome, sku, categoria, quantidade, preco, data, obs);
-    exibirProduto(nome, sku, categoria, quantidade, preco, data, obs);
+    salvarProduto(id, nome, sku, categoria, quantidade, preco, data);
+    exibirProduto(nome, sku, categoria, quantidade, preco, data);
 }
 
 document.addEventListener("DOMContentLoaded", processarCadastro);

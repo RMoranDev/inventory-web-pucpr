@@ -158,16 +158,6 @@ function erroData(campo) {
     return "";
 }
 
-function erroObservacoes(campo) {
-    if (campo.value.trim() === "") {
-        return "Escreva uma observação.";
-    }
-    if (campo.value.length > 255) {
-        return "Máximo de 255 caracteres.";
-    }
-    return "";
-}
-
 document.addEventListener("DOMContentLoaded", function () {
     validarCampoNome();
     validarCampoSku();
@@ -176,7 +166,6 @@ document.addEventListener("DOMContentLoaded", function () {
     ativarValidacao("quantidade", erroQuantidade);
     ativarValidacao("preco", erroPreco);
     ativarValidacao("data", erroData);
-    ativarValidacao("observacoes", erroObservacoes);
 
     const campoData = document.querySelector("#data");
     if (campoData != null) {
