@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - Inventory Web</title>
+
+    <link rel="icon" href="imagens/favicon.svg" type="image/svg+xml">
+
+    <link rel="stylesheet" href="estilos/style.css">
+
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/produtos.js" defer></script>
+</head>
+
+<body>
+    <div id="header-container"></div>
+
+    <main class="pagina-produtos">
+
+        <section class="produtos-introducao">
+
+            <h1>Produtos</h1>
+            <p>Consulte, busque e acompanhe o estoque dos seus produtos.</p>
+
+        </section>
+
+        <section class="produtos-indicadores">
+
+            <article class="indicador">
+                <h2>Total de produtos</h2>
+                <p id="total-produtos">0</p>
+            </article>
+
+            <article class="indicador">
+                <h2>Estoque baixo</h2>
+                <p id="total-estoque-baixo">0</p>
+            </article>
+
+            <article class="indicador">
+                <h2>Categorias</h2>
+                <p id="total-categorias">0</p>
+            </article>
+        </section>
+
+        <section class="produtos-filtros">
+
+            <form id="form-filtros">
+
+                <div class="filtro-campo">
+                    <label for="busca">Buscar produto</label>
+                    <input type="search" id="busca" placeholder="Digite o nome do produto">
+                </div>
+
+                <div class="filtro-campo">
+                    <label for="categoria">Categoria</label>
+                    <select id="categoria">
+                        <option value="">Todas</option>
+                    </select>
+                </div>
+
+                <a href="form.html" class="botao botao-principal">
+                    Novo produto
+                </a>
+
+            </form>
+
+        </section>
+
+        <section class="produtos-lista">
+
+            <div class="tabela-container">
+
+                <table class="produtos-tabela">
+                    <thead>
+                        <tr>
+                            <th scope="col">Código</th>
+                            <th scope="col">Produto</th>
+                            <th scope="col">Categoria</th>
+                            <th scope="col">Quantidade</th>
+                            <th scope="col">Preço</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="lista-produtos">
+                        <!-- As linhas serão inseridas pelo JavaScript. -->
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <p class="tabela-rodape" id="contador-produtos">
+                <!-- Mostrando 0 de 0 produtos -->
+            </p>
+
+        </section>
+
+    </main>
+
+    <div id="footer-container"></div>
+</body>
+
+</html>

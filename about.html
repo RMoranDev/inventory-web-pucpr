@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre - Inventory Web</title>
+
+    <link rel="icon" href="imagens/favicon.svg" type="image/svg+xml">
+
+    <link rel="stylesheet" href="estilos/style.css">
+
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/about.js" defer></script>
+</head>
+
+<body>
+
+    <div id="header-container"></div>
+
+    <main>
+
+        <section class="section-about">
+
+            <div class="container-about">
+
+                <div class="hero-texto">
+                    <span class="hero-etiqueta">Sobre o projeto</span>
+
+                    <h1>Um site de estoque feito só com HTML, CSS e JavaScript.</h1>
+
+                    <p class="hero-description">
+                        O Inventory Web é um trabalho acadêmico que mostra na prática como estruturar, estilizar e dar
+                        vida a um site sem frameworks: menu compartilhado, formulário com validação e leitura de dados
+                        enviados pelo método GET.
+                    </p>
+                </div>
+
+                <div class="estadisticas-card">
+
+                    <div class="estadisticas-item">
+                        <span class="estadisticas-number" id="stat-paginas">5</span>
+                        <span class="estadisticas-label">páginas</span>
+                    </div>
+
+                    <div class="estadisticas-item">
+                        <span class="estadisticas-number" id="stat-linguagens">3</span>
+                        <span class="estadisticas-label">linguagens</span>
+                    </div>
+
+                    <div class="estadisticas-item">
+                        <span class="estadisticas-number" id="stat-frameworks">0</span>
+                        <span class="estadisticas-label">frameworks</span>
+                    </div>
+
+                </div>
+
+                <div class="hero-illustration">
+                    <img src="imagens/hero.svg" alt="Ilustração do projeto Inventory Web">
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="section-paginas">
+            <div class="container">
+
+                <div class="paginas">
+
+                    <span>Páginas</span>
+
+                    <h2>Tudo o que o site tem</h2>
+
+                    <p>Cada página tem uma função e o mesmo menu no topo, para navegar sem se perder.</p>
+
+                </div>
+
+                <div class="cards-grid">
+
+                    <article class="card">
+                        <span class="card-arquivo">index.html</span>
+                        <h3 class="card-titulo">Página inicial</h3>
+                        <p class="card-texto">Apresenta o sistema e leva ao cadastro.</p>
+                    </article>
+
+                    <article class="card">
+                        <span class="card-arquivo">produtos.html</span>
+                        <h3 class="card-titulo">Produtos</h3>
+                        <p class="card-texto">Lista os itens com busca, filtro e cards de destaque.</p>
+                    </article>
+
+                    <article class="card">
+                        <span class="card-arquivo">form.html</span>
+                        <h3 class="card-titulo">Cadastro</h3>
+                        <p class="card-texto">Formulário com validação de todos os campos.</p>
+                    </article>
+
+                    <article class="card">
+                        <span class="card-arquivo">formAction.html</span>
+                        <h3 class="card-titulo">Resultado</h3>
+                        <p class="card-texto">Recebe os dados via GET e mostra com JavaScript.</p>
+                    </article>
+
+                    <article class="card">
+                        <span class="card-arquivo">about.html</span>
+                        <h3 class="card-titulo">Sobre</h3>
+                        <p class="card-texto">Apresenta o trabalho, o autor e as regras.</p>
+                    </article>
+
+                    <article class="card">
+                        <span class="card-arquivo">components/</span>
+                        <h3 class="card-titulo">Menu e rodapé</h3>
+                        <p class="card-texto">Carregados com JavaScript e iguais em todas as páginas.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-tecnologias">
+
+            <div class="container">
+
+                <div class="tecnologias-titulos">
+
+                    <span>Tecnologias</span>
+
+                    <h2>Três linguagens, nenhum atalho</h2>
+
+                    <p>Só os fundamentos da web, cada um com seu papel.</p>
+
+                </div>
+
+                <div class="tecnologia-grid">
+
+                    <div class="tecnologia-card">
+                        <h3 class="tecnologia-titulo">HTML</h3>
+                        <ul class="tecnologia-lista">
+                            <li>Tags semânticas: header, nav, main, section e footer</li>
+                            <li>Formulário com métodos e GET em campo</li>
+                            <li>Caminhos relativos para os recursos</li>
+                        </ul>
+                    </div>
+
+                    <div class="tecnologia-card">
+                        <h3 class="tecnologia-titulo">CSS</h3>
+                        <ul class="tecnologia-lista">
+                            <li>Visual moderno com sistema flexbox e grid</li>
+                            <li>Layout responsivo</li>
+                            <li>Estilos em arquivo separado, na pasta estilos</li>
+                        </ul>
+                    </div>
+
+                    <div class="tecnologia-card">
+                        <h3 class="tecnologia-titulo">JavaScript</h3>
+                        <ul class="tecnologia-lista">
+                            <li>Menu e rodapé carregados com fetch</li>
+                            <li>Validação nos campos do formulário</li>
+                            <li>Leitura dos dados do GET com JavaScript e URLSearchParams</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-dados">
+
+            <div class="container-dados">
+
+                <div class="arvore">
+
+                    <span>inventory-web/</span>
+                    <pre><code>├── components/
+│   ├── footer.html
+│   └── header.html
+├── estilos/
+│   └── style.css
+├── imagens/
+│   ├── caixa.svg
+│   ├── favicon.svg
+│   ├── hero.svg
+│   ├── hero-2.svg
+│   ├── logo.svg
+│   ├── logo-horizontal.svg
+│   ├── sino.svg
+│   └── visto.svg
+├── scripts/
+│   ├── form.js
+│   ├── formAction.js
+│   ├── main.js
+│   └── produtos.js
+├── about.html
+├── form.html
+├── formAction.html
+├── index.html
+└── produtos.html</code></pre>
+                </div>
+
+                <div class="requerimentos">
+
+                    <span>Estrutura</span>
+
+                    <h2>Organizado por tipo de arquivo</h2>
+
+                    <h3>Requisitos atendidos</h3>
+
+                    <ul class="requerimentos-lista">
+                        <li>
+                            <span class="check-icon">✓</span>
+                            <span>Mesmo menu em todas as páginas</span>
+                        </li>
+                        <li>
+                            <span class="check-icon">✓</span>
+                            <span>Formulário com validação de todos os campos</span>
+                        </li>
+                        <li>
+                            <span class="check-icon">✓</span>
+                            <span>Dados enviados por GET e lidos com JavaScript</span>
+                        </li>
+                        <li>
+                            <span class="check-icon">✓</span>
+                            <span>Caminhos relativos em todos os recursos</span>
+                        </li>
+                        <li>
+                            <span class="check-icon">✓</span>
+                            <span>Arquivos separados em subpastas por tipo</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-autor">
+
+            <div class="container-autor">
+
+                <div class="autor-info">
+                    <div class="autor-avatar">RM</div>
+
+                    <div class="autor-detalhes">
+
+                        <span>Desenvolvedor</span>
+
+                        <h3>Ricardo Moran</h3>
+
+                        <p>Estudante de Análise e Desenvolvimento de Sistemas, PUCPR</p>
+
+                        <a href="https://github.com/RMoranDev" target="_blank" rel="noopener noreferrer"
+                            class="autor-github">github.com/RMoranDev</a>
+
+                    </div>
+                </div>
+
+                <a href="https://github.com/RMoranDev" target="_blank" rel="noopener noreferrer" class="btn-github">Ver
+                    o código</a>
+
+            </div>
+        </section>
+
+    </main>
+
+    <div id="footer-container"></div>
+</body>
+
+</html>

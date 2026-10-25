@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado do Cadastro - Inventory Web</title>
+
+    <link rel="icon" href="./imagens/favicon.svg" type="image/svg+xml">
+
+    <link rel="stylesheet" href="./estilos/style.css">
+
+    <script src="./scripts/formAction.js" defer></script>
+    <script src="./scripts/main.js" defer></script>
+</head>
+
+<body>
+    <div id="header-container"></div>
+
+    <main class="container pagina-resultado">
+
+        <section class="resultado-cabecalho" id="resultado-cabecalho">
+            <div class="resultado-icone" id="resultado-icone">✓</div>
+            <div>
+                <h1 id="resultado-titulo">Cadastro recebido</h1>
+                <p id="resultado-mensagem">Produto cadastrado com sucesso.</p>
+            </div>
+        </section>
+
+        <section class="resultado-grid">
+
+            <article class="card dados-produto">
+                <h2>Dados do produto</h2>
+                <dl id="dados-produto">
+                </dl>
+            </article>
+
+        </section>
+
+        <div class="resultado-acoes">
+            <a href="form.html" class="botao botao-principal">
+                Novo cadastro
+            </a>
+
+            <a href="index.html" class="botao botao-secundario">
+                Voltar ao início
+            </a>
+        </div>
+
+    </main>
+
+    <div id="footer-container"></div>
+
+</body>
+
+</html>
